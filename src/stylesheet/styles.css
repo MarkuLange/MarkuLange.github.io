@@ -1,0 +1,478 @@
+/* ROOT COLOUR & SHARED SETTINGS*/
+
+:root {
+    --main-background: #121212;
+    --main-header: #1f4d6f;
+    --current: #009474;
+    --active: #107e66;
+    --btn-text: #062e26;
+    --main-text: #969696;
+    --ez-icon: url(../media/ez-white-nobg.png);
+}
+
+body {
+    background-color: var(--main-background);
+    color: var(--main-text);
+    margin: 0;
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--current);
+}
+
+hr {
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+
+/* HEADER & NAVBAR */
+
+header {
+    height: 12vh;
+    background-color: var(--main-header);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: grid;
+    grid-row: 1;
+    justify-content: space-between;
+    margin: 0 2vw;
+}
+
+.ez-logo {
+    grid-column: 1;
+    height: 80px;
+    width: 80px;
+    background-image: var(--ez-icon);
+    background-size: contain;
+    margin: auto;
+}
+.home-btn {
+    grid-column: 2;
+}
+.about-btn {
+    grid-column: 3;
+}
+.product-btn {
+    grid-column: 4;
+}
+.contact-btn {
+    grid-column: 5;
+}
+.profile-btn {
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    border: none;
+    background-size: contain;
+    background-image: url(../media/profile-inactive.png);
+}
+.profile-btn:hover {
+    background-image: url(../media/profile-active.png);
+    cursor: pointer;
+}
+
+.dropdown {
+    font-size: 1rem;
+    margin: auto;
+    grid-column: 6;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--main-header);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    border-style: solid;
+    color: var(--main-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+} 
+.dropdown-content a:hover {color: var(--current);}
+.dropdown-content a:active {color: var(--active);}
+.dropdown:hover .dropdown-content {display: block;}
+  
+.home-btn, .about-btn, .contact-btn, .product-btn, .big-btn{
+    text-decoration: none;
+    color: inherit;
+    margin: auto;
+}
+.home-btn:hover, .about-btn:hover, .contact-btn:hover, .product-btn:hover{
+    color: var(--current);
+}
+.home-btn:active, .about-btn:active, .contact-btn:active, .product-btn:active{
+    color: var(--active);
+}
+
+.current-link {
+    color: var(--current);
+}
+
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.socials-container {
+    display: flex;
+    float: right;
+}
+.facebook-icon {
+    background-image: url(../media/facebook.png);
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    margin: auto;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.twitter-icon {
+    background-image: url(../media/twitter.png);
+    height: 35px;
+    width: 35px;
+    background-size: contain;
+    margin: auto;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+
+/* MAIN  - CONTACT*/
+
+.contact-wrapper {
+    display: grid;
+    margin: 20px, 0;
+}
+.form-wrapper {
+    grid-column: 1/3;
+    grid-row: 1;
+    margin: 20px 0 0 0;
+}
+
+.contact-heading {
+position: relative;
+width: 50%;
+left: 40px;
+margin: 10px;
+font-size: 2.5rem;
+}
+
+.contact-forms{
+    position: relative;
+    left: 40px;
+    display: grid;
+    margin: 10px;
+}
+
+.short-form {
+    border-style: none;
+    border-radius: 15px;
+    padding: 8px;
+    width: 300px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.long-form {
+    border-style: none;
+    border-radius: 15px;
+    padding: 8px;
+    width: 600px;
+    margin: 5px;
+    font-size: 20px;
+    resize: none;
+}
+
+.aside-contact {
+    grid-row: 1;
+    grid-column: 3/4;
+    display: grid;
+    position: relative;
+    margin: 20px 0 0 0;
+}
+
+#map {
+    display: flex;
+    grid-row: 2;
+    background-image: url(../media/map.png);
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+.contact-info {
+    display: grid;
+}
+
+.small-button {
+    position: relative;
+    left: 230px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 25px;
+    width: 150px;
+}
+
+.big-button, .small-button {
+    background-color: var(--current);
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: none;
+    color: var(--btn-text);
+    font-weight: bold;
+}
+
+.big-button:hover, .small-button:hover {
+    cursor: pointer;
+    background-color: var(--active);
+}
+
+.big-button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    width: 200px;
+}
+
+
+/* MAIN - HOME */
+.home-wrapper {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.ez-header {
+    display: block;
+    height: 120px;
+    width: 120px;
+    background-image: var(--ez-icon);
+    background-size: contain;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.ez-catchphrase {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.ez-bio {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* MAIN - ABOUT */
+
+.about-wrapper {
+    display: grid;
+    justify-content: space-around;
+}
+
+.scroller {
+    display: flex;
+    box-sizing: border-box;
+    height: 88vh;
+    grid-column: 1/2;
+    width: 45vw;
+    background-color: var(--main-text);
+}
+
+.scroller-picture-container {
+    border-color: var(--main-background);
+    border-radius: 20px;
+    text-align: center;
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0.697);
+    margin: auto;
+    width: 25vw;
+    height: 30vw;
+    
+}
+
+.scroller-picture {
+    width: 100%;
+    margin: auto;
+}
+
+.scroller-text {
+    width: 100%;
+    margin: auto;
+    color: var(--main-background);
+}
+
+
+.aside-about {
+    grid-column: 2/3;
+    width: 45vw;
+    margin: auto;
+} 
+
+.aside-heading {
+    margin: 0;
+}
+
+.next-box {
+    display: grid;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.goto-products {
+    display: grid;
+    grid-column: 1/2;
+}
+
+.goto-contact {
+    display: grid;
+    grid-column: 2/3
+}
+
+.goto-text {
+    grid-row: 1;
+}
+
+.travel-button {
+    grid-row: 2;
+    background-color: var(--current);
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: none;
+    color: var(--btn-text);
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    font-size: 25px;
+    width: 150px;
+}
+
+/* MAIN - PRODUCTS */
+
+.product-box {
+    display: grid;
+    border-style: solid;
+    border-radius: 40px;
+    grid-column: 2/3;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    width: 600px;
+}
+
+.product-heading {
+    display: grid;
+    justify-content: center;
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.product-ez {
+    grid-row: 1;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.product-title{
+    font-family: fantasy;
+    color: var(--main-header);
+    font-size: 4.5rem;
+    grid-row: 1;
+    margin: auto;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.product-catchphrase {
+    font-family: fantasy;
+    font-size: 1.5rem;
+    grid-column: 1/3;
+    grid-row: 2;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.product-example-container {
+    grid-row: 3;
+    grid-column: 1/2;
+    margin: auto;
+    margin-bottom: 5px;
+    background-image: url(../media/ez-budgeting-example.png);
+    background-size: cover;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--main-header);
+    width: 210px;
+    height: 450px;
+}
+
+.product-text-container {
+    margin: auto;
+    margin-left: 0;
+    text-align: left;
+    width: 250px;
+    grid-row: 3;
+    grid-column: 2/3;
+}
+
+.product-wrapper {
+    display: grid;
+}
+
+.btn-prev {
+    font-size: 15px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    text-decoration: none;
+    color: inherit;
+    margin: auto;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 120px;
+    height: 50px;
+    border-style: none;
+}
+
+.btn-next {
+    font-size: 15px;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    text-decoration: none;
+    color: inherit;
+    margin: auto;
+    width: 120px;
+    height: 50px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: var(--current);
+    color: var(--btn-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-next:hover {
+    cursor: pointer;
+    background-color: var(--active);
+}
+
